@@ -145,7 +145,7 @@ public class DetectionRequester
     @Override
     public void onConnected(Bundle arg0) {
         // If debugging, log the connection
-        Log.d(ControllerLocations.APPTAG, "conn");
+        Log.d(ActivityUtils.APPTAG, "conn");
 
         // Continue the process of requesting activity recognition updates
         continueRequestActivityUpdates();
@@ -157,7 +157,7 @@ public class DetectionRequester
     @Override
     public void onDisconnected() {
         // In debug mode, log the disconnection
-        Log.d(ControllerLocations.APPTAG, "bububu");
+        Log.d(ActivityUtils.APPTAG, "bububu");
 
         // Destroy the current activity recognition client
         mActivityRecognitionClient = null;
@@ -216,7 +216,7 @@ public class DetectionRequester
 
             try {
                 connectionResult.startResolutionForResult((Activity) mContext,
-                    ControllerLocations.CONNECTION_FAILURE_RESOLUTION_REQUEST);
+                    ActivityUtils.CONNECTION_FAILURE_RESOLUTION_REQUEST);
 
             /*
              * Thrown if Google Play services canceled the original
@@ -236,7 +236,7 @@ public class DetectionRequester
             Dialog dialog = GooglePlayServicesUtil.getErrorDialog(
                             connectionResult.getErrorCode(),
                             (Activity) mContext,
-                            ControllerLocations.CONNECTION_FAILURE_RESOLUTION_REQUEST);
+                            ActivityUtils.CONNECTION_FAILURE_RESOLUTION_REQUEST);
             if (dialog != null) {
                 dialog.show();
             }

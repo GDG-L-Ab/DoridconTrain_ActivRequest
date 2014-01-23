@@ -7,9 +7,19 @@
     android:padding="20dp"
     tools:context=".MainActivity" >
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose"
+        android:textColor="@android:color/white"
+        android:textStyle="italic|bold"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
 
         <EditText
             android:id="@+id/EdTePlace"
@@ -24,14 +34,58 @@
             <requestFocus />
         </EditText>
 
-        <ImageView
-            android:id="@+id/imageView1"
+        <ImageButton
+            android:id="@+id/imBut_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:src="@drawable/ic_action_accept" />
+            android:src="@drawable/ic_action_accept" 
+            android:background="@android:color/transparent"/>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right" >
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choosenlocTit"
+            android:textColor="@android:color/white"
+            android:textStyle="bold|italic"
+            android:paddingTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            android:id="@+id/teViChoosedLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noLoc"
+            android:textColor="@android:color/white"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/teViLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center" 
+        android:layout_marginTop="40dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -67,8 +121,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@string/loading"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white" />
+            	
         </LinearLayout>
 
     </RelativeLayout>

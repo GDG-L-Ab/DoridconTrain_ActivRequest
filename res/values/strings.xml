@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CodelabTreno</string>
+    <string name="app_name">Activity Recognition</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="choose">Scegli una location</string>
+    <string name="choosenlocTit">Location scelta</string>
+    <string name="noLoc">Nessuna location</string>
+    <string name="loading">Detecting</string>
     <string name="bullet_on">\u2022</string>
     <string name="bullet_off">o</string>
+    <string name="gdg">GDG L-Ab</string>
 
 </resources>

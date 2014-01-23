@@ -3,11 +3,9 @@ package com.droidcon.codelabtreno;
 import com.google.android.gms.location.ActivityRecognitionResult;
 import com.google.android.gms.location.DetectedActivity;
 
-import android.app.Activity;
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Message;
-import android.util.Log;
 
 public class ActivityRecognitionIntentService extends IntentService{
 
@@ -18,25 +16,14 @@ public class ActivityRecognitionIntentService extends IntentService{
 
 	@Override
     protected void onHandleIntent(Intent intent) {
-		// If the incoming intent contains an update
         if (ActivityRecognitionResult.hasResult(intent)) {
-            // Get the update
-            ActivityRecognitionResult result =
-                    ActivityRecognitionResult.extractResult(intent);
-            // Get the most probable activity
-            DetectedActivity mostProbableActivity =
-                    result.getMostProbableActivity();
-            /*
-             * Get the probability that this activity is the
-             * the user's actual activity
-             */
-            int confidence = mostProbableActivity.getConfidence();
-            /*
-             * Get an integer describing the type of activity
-             */
+            
+            ActivityRecognitionResult result = ActivityRecognitionResult.extractResult(intent);
+           
+            DetectedActivity mostProbableActivity = result.getMostProbableActivity();
+            
             int activityType = mostProbableActivity.getType();
             String activityName = getNameFromType(activityType);
-            Log.i("Cosa fa", activityName);
             
             Message msg = new Message();
             msg.obj = activityName;
@@ -66,4 +53,6 @@ public class ActivityRecognitionIntentService extends IntentService{
         return "unknown";
     }
 
+
+	
 }

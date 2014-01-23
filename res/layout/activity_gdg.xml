@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1c1c1c"
+    android:padding="40dp" 
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:src="@drawable/gdglab" 
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GDG L-Ab"
+        android:textStyle="bold|italic"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="for"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="normal" 
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+        
+        <View
+            android:id="@+id/view2"
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Droidcon Italy 2014"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+         />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Torino 6-9 Febbraio 2014"
+        android:textStyle="normal"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+         />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Follow us on:"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_gravity="left"
+         />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+        android:layout_gravity="left" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/foll_gplus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/common_signin_btn_icon_dark"
+            android:layout_marginRight="30dp" />
+
+        <ImageView
+            android:id="@+id/foll_face"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/face" 
+            android:padding="3dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

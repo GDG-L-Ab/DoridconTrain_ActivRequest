@@ -1,13 +1,6 @@
 package com.droidcon.codelabtreno;
 
-import android.app.PendingIntent;
-import android.content.Context;
-import android.location.Location;
-
-
-import com.google.android.gms.location.ActivityRecognitionClient;
-
-public final class ControllerLocations {
+public final class ActivityUtils {
 
     // Debugging tag for the application
     public static final String APPTAG = "LocationSample";
